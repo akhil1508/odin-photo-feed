@@ -1,0 +1,11 @@
+<%= form_tag :action => 'home' do %>
+<%= text_field_tag  :id %>
+<%= submit_tag :submit %>
+<%end%>
+<% if @photosets %>
+<%= @photosets.inspect%>
+<%@photos.each do |photo|%>
+<%=image_tag(photo)%>
+<%end%>
+<%end%>
+<%= debug(params)%>
